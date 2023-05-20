@@ -1,0 +1,12 @@
+<repositories xmlns="" version="1.0">
+  <repo priority="50" quality="experimental" status="unofficial">
+    <name>overlay</name>
+    <description>Outreach.io Gentoo Overlay</description>
+    <homepage>https://github.com/getoutreach/overlay</homepage>
+    <owner>
+      <email>jared.allard@outreach.io</email>
+      <name>Jared Allard</name>
+    </owner>
+    <source type="git">https://github.com/getoutreach/overlay.git</source>
+  </repo>
+</repositories>
