@@ -4,7 +4,7 @@
 
 EAPI=8
 
-inherit xdg-utils
+inherit desktop xdg
 
 DESCRIPTION="Password Manager"
 HOMEPAGE="https://1password.com"
@@ -42,10 +42,12 @@ src_install() {
   mkdir -p "${D}/opt/1Password/"
   cp -ar "${S}/${PN}-"**"/"* "${D}/opt/1Password/" || die "Install failed!"
 
-  # TODO: xdg stuff... one day.
   chgrp onepassword "${D}/opt/1Password/1Password-BrowserSupport"
   dosym /opt/1Password/1password /usr/bin/1password
   dosym /opt/1Password/op-ssh-sign /usr/bin/op-ssh-sign
+
+  domenu "${FILESDIR}/1password.desktop"
+  newicon "${D}/opt/1Password/resources/icons/hicolor/512x512/apps/1password.png" "${PN}.png"
 }
 
 pkg_postinst() {
@@ -53,9 +55,7 @@ pkg_postinst() {
   chmod 6755 /opt/1Password/1Password-KeyringHelper
   chmod 2755 /opt/1Password/1Password-BrowserSupport
 
-  xdg_icon_cache_update
-  xdg_desktop_database_update
-  xdg_mimeinfo_database_update
+  xdg_pkg_postinst
 }
 
 pkg_postrm() {
