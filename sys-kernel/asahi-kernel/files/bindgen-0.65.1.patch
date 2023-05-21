@@ -1,0 +1,24 @@
+diff --git a/rust/Makefile b/rust/Makefile
+index aee0701acf02..074989ae41ef 100644
+--- a/rust/Makefile
++++ b/rust/Makefile
+@@ -288,7 +288,7 @@ quiet_cmd_bindgen = BINDGEN $@
+ 	$(BINDGEN) $< $(bindgen_target_flags) \
+ 		--use-core --with-derive-default --ctypes-prefix core::ffi --no-layout-tests \
+ 		--no-debug '.*' \
+-		--size_t-is-usize -o $@ -- $(bindgen_c_flags_final) -DMODULE \
++		-o $@ -- $(bindgen_c_flags_final) -DMODULE \
+ 		$(bindgen_target_cflags) $(bindgen_target_extra)
+ 
+ $(obj)/bindings/bindings_generated.rs: private bindgen_target_flags = \
+@@ -302,8 +302,8 @@ $(obj)/bindings/bindings_generated.rs: $(src)/bindings/bindings_helper.h \
+ # given it is `libclang`; but for consistency, future Clang changes and/or
+ # a potential future GCC backend for `bindgen`, we disable it too.
+ $(obj)/bindings/bindings_helpers_generated.rs: private bindgen_target_flags = \
+-    --blacklist-type '.*' --whitelist-var '' \
+-    --whitelist-function 'rust_helper_.*'
++    --blocklist-type '.*' --allowlist-var '' \
++    --allowlist-function 'rust_helper_.*'
+ $(obj)/bindings/bindings_helpers_generated.rs: private bindgen_target_cflags = \
+     -I$(objtree)/$(obj) -Wno-missing-prototypes -Wno-missing-declarations
+ $(obj)/bindings/bindings_helpers_generated.rs: private bindgen_target_extra = ; \
