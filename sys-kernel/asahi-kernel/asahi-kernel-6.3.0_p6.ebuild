@@ -44,6 +44,7 @@ BDEPEND="
   edge? (
     >=virtual/rust-1.66.1[rustfmt]
     >=dev-util/bindgen-0.65.1
+    >=media-libs/mesa-23.2.0_pre20230603
   )
   debug? ( dev-util/pahole )
 "
