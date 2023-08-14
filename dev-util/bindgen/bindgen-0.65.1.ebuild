@@ -111,14 +111,14 @@ QA_FLAGS_IGNORED="usr/bin/${PN}"
 S="${WORKDIR}/rust-${P}"
 
 src_test() {
-  # required by clang during tests
-  local -x TARGET="$(rust_abi)"
+	# required by clang during tests
+	local -x TARGET="$(rust_abi)"
 
-  cargo_src_test --bins --lib
+	cargo_src_test --bins --lib
 }
 
 src_install() {
-  cargo_src_install --path "${S}/bindgen-cli"
+	cargo_src_install --path "${S}/bindgen-cli"
 
-  einstalldocs
+	einstalldocs
 }

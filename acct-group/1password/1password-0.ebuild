@@ -5,4 +5,6 @@ EAPI=8
 
 inherit acct-group
 
+DESCRIPTION="Groups for the 1Password password manager"
+LICENSE="GPL-2"
 ACCT_GROUP_ID=-1

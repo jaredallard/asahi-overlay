@@ -7,7 +7,7 @@ DESCRIPTION="Virtual to depend on any Distribution Kernel"
 HOMEPAGE=""
 SRC_URI=""
 
-LICENSE=""
+LICENSE="GPL-2"
 SLOT="0/${PV}"
 KEYWORDS="arm64"
 
