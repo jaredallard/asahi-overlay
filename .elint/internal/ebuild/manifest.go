@@ -1,3 +1,4 @@
+// Copyright (C) 2023 Jared Allard <jared@rgst.io>
 // Copyright (C) 2023 Outreach <https://outreach.io>
 //
 // This program is free software: you can redistribute it and/or
@@ -29,7 +30,7 @@ import (
 var manifestValidationScript string
 
 // gentooImage is the docker image used for validating Manifest files.
-var gentooImage = "ghcr.io/getoutreach/overlay:elint-base"
+var gentooImage = "ghcr.io/jaredallard/asahi-overlay:elint-base"
 
 // Common errors.
 var (

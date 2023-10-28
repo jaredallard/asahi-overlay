@@ -1,3 +1,4 @@
+// Copyright (C) 2023 Jared Allard <jared@rgst.io>
 // Copyright (C) 2023 Outreach <https://outreach.io>
 //
 // This program is free software: you can redistribute it and/or
@@ -13,7 +14,7 @@
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 // Package main implements a linter for Gentoo ebuilds. It is intended
-// to be ran only on the getoutreach/overlay repository. It mainly
+// to be ran only on the jaredallard/asahi-overlay repository. It mainly
 // handles:
 // - Ensuring ebuilds have certain variables set.
 // - Ensuring that Manifest files have been updated.
@@ -28,7 +29,7 @@ import (
 
 	"github.com/egym-playground/go-prefix-writer/prefixer"
 	"github.com/fatih/color"
-	"github.com/getoutreach/overlay/.elint/internal/ebuild"
+	"github.com/jaredallard/asahi-overlay/.elint/internal/ebuild"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )

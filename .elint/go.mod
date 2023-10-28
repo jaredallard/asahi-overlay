@@ -1,6 +1,6 @@
-module github.com/getoutreach/overlay/.elint
+module github.com/jaredallard/asahi-overlay/.elint
 
-go 1.20
+go 1.21
 
 require (
 	github.com/egym-playground/go-prefix-writer v0.0.0-20180609083313-7326ea162eca

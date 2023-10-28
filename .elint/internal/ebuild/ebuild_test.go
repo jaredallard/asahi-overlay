@@ -1,3 +1,4 @@
+// Copyright (C) 2023 Jared Allard <jared@rgst.io>
 // Copyright (C) 2023 Outreach <https://outreach.io>
 //
 // This program is free software: you can redistribute it and/or
