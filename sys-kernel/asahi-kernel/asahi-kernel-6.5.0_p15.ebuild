@@ -24,7 +24,7 @@ fi
 # PKGBUILD_COMMIT_SHA is the SHA used for fetching the kernel config files from
 # the asahi linux PKGBUILDs repo.
 # See: https://github.com/AsahiLinux/PKGBUILDs
-PKGBUILD_COMMIT_SHA="dd6100bdba8e48d440d868cad89cd3b6ea7fa714"
+PKGBUILD_COMMIT_SHA="3562a8dd2636646e72dc6ee50515a0be3cf0c66f"
 
 DESCRIPTION="Asahi Linux Kernel for M1/2 Macs"
 HOMEPAGE="https://github.com/AsahiLinux/linux"
@@ -42,9 +42,9 @@ IUSE="+edge debug"
 RDEPEND=""
 BDEPEND="
   edge? (
-    >=dev-lang/rust-1.69.0[rustfmt,rust-src]
-    >=dev-util/bindgen-0.65.1
-    >=media-libs/mesa-23.2.0_pre20230603
+    >=virtual/rust-1.71.1[rustfmt,rust-src]
+    >=dev-util/bindgen-0.68.1
+    >=media-libs/mesa-23.3.0_pre20230904
   )
   debug? ( dev-util/pahole )
 "
