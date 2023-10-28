@@ -42,7 +42,7 @@ IUSE="+edge debug"
 RDEPEND=""
 BDEPEND="
   edge? (
-    >=virtual/rust-1.71.1[rustfmt,rust-src]
+    >=dev-lang/rust-1.71.1[rustfmt,rust-src]
     >=dev-util/bindgen-0.68.1
     >=media-libs/mesa-23.3.0_pre20230904
   )
