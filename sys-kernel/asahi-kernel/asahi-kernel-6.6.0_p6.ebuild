@@ -59,9 +59,12 @@ QA_FLAGS_IGNORED="
 "
 
 src_prepare() {
+  shopt -s nullglob
   local PATCHES=(
     "${FILESDIR}"/*.patch
   )
+  shopt -u nullglob
+
   default
 
   # Use the asahi config as the default
