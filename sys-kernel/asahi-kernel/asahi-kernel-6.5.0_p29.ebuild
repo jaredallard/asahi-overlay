@@ -1,0 +1,1 @@
+asahi-kernel-6.6.0_p6.ebuild

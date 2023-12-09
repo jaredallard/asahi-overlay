@@ -42,9 +42,9 @@ IUSE="+edge debug"
 RDEPEND=""
 BDEPEND="
   edge? (
-    >=dev-lang/rust-1.73.0[rustfmt,rust-src]
+    >=dev-lang/rust-1.74.1[rustfmt,rust-src]
     >=dev-util/bindgen-0.68.1
-    >=media-libs/mesa-23.3.0_pre20230904
+    >=media-libs/mesa-24.0.0_pre20231126
   )
   debug? ( dev-util/pahole )
 "
@@ -90,7 +90,7 @@ src_prepare() {
   local myversion="-dist"
   echo "CONFIG_LOCALVERSION=\"${myversion}\"" >"${T}"/version.config || die
 
-  local merge_configs=()
+  local merge_configs=("${FILESDIR}/asahi-kernel.config")
 
   # If we are building an edge kernel, merge in the edge config
   use edge && merge_configs+=("${DISTDIR}"/asahi-edge.config)
