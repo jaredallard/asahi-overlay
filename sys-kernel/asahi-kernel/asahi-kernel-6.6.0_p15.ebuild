@@ -90,7 +90,10 @@ src_prepare() {
   local myversion="-dist"
   echo "CONFIG_LOCALVERSION=\"${myversion}\"" >"${T}"/version.config || die
 
-  local merge_configs=("${FILESDIR}/asahi-kernel.config")
+  local merge_configs=(
+    "${DISTDIR}"/asahi.config
+    "${FILESDIR}/asahi-kernel.config"
+  )
 
   # If we are building an edge kernel, merge in the edge config
   use edge && merge_configs+=("${DISTDIR}"/asahi-edge.config)
