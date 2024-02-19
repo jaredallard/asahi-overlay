@@ -1,3 +1,9 @@
+# IMPORTANT: This repository is no longer supported
+
+Now that [`asahi-overlay`](https://github.com/chadmed/asahi-overlay) has a distribution kernel, we no longer need to maintain this. Please use it instead.
+
+---
+
 # asahi-overlay
 
 Asahi Linux specific Gentoo Overlay for M* Macs.
